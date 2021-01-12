@@ -5,15 +5,15 @@ import {
   increment,
   incrementByValue,
   decrementByValue,
-} from "../Store/Action";
+} from "../Store/CounterSlice";
 
 const Counter = () => {
   //const [counter, setCounter] = useState(0);
   const [value, setValue] = useState(0);
   const dispatch = useDispatch();
   const counter = useSelector((state) => {
-    //  console.log(state);
-    return state.counter;
+    console.log(state.counter);
+    return state.counter.count;
   });
 
   return (
